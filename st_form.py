@@ -42,3 +42,20 @@ selected_val = form.slider('값 선택')
 form.form_submit_button('제출') #모든 양식은 st.form_submit_button을 포함해야 함.
 #st.button과 st.download_button은 양식에 추가할 수 없습니다.
 st.write('선택된 값: ', selected_val)
+
+
+
+
+
+#과제
+color = st.color_picker("Picker A color", "#00f900")
+st.write("The current color is", color)
+
+st.title("st.from")
+
+st.header('21대 대통령 선거')
+with st.form('my form'):
+        st.subheader('**투표 용지**')
+        kr_president = st.selectbox('후보', ['이재명', '한동훈mport streamlit as st
+
+st.title('st.form')
