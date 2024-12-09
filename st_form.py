@@ -48,14 +48,22 @@ st.write('선택된 값: ', selected_val)
 
 
 #과제
+
 color = st.color_picker("Picker A color", "#00f900")
 st.write("The current color is", color)
 
 st.title("st.from")
 
-st.header('21대 대통령 선거')
+st.header('21대 대통령선거')
 with st.form('my form'):
         st.subheader('**투표 용지**')
-        kr_president = st.selectbox('후보', ['이재명', '한동훈mport streamlit as st
+        kr_president = st.selectbox('21대 대통령 후보', ['이재명', '한동훈', '조국', '이준석', '허경영', '홍길동', '강감찬'])
+        submitted = st.form_submit_button('제출')
 
-st.title('st.form')
+if submitted:
+        st.markdown(f'''
+                    - 투표한 대통령 후보 : '{kr_president}'
+                    ''')
+        
+else:
+        st.write("투표하세요")
